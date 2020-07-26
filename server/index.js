@@ -56,7 +56,7 @@ app.post('/api/users/login', (req, res) => {
   // save token at... (cookies, local, session, anywhere safe)
         res.cookie("x_auth", user.token)
         .status(200)
-        .json({ loginSuccess:true, userId: user._id })
+        .json({ loginSuccess: true, userId: user._id })
       })
     })
   })
