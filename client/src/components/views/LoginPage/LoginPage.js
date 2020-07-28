@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { loginUser } from '../../../_actions/user_actions'
+import { withRouter } from 'react-router-dom'
 
 function LoginPage(props) {
     const dispatch = useDispatch()
@@ -50,9 +51,8 @@ function LoginPage(props) {
                 <br />
                 <button>Login</button>
             </form>
-
         </div>
     )
 }
 
-export default LoginPage
+export default withRouter(LoginPage)
